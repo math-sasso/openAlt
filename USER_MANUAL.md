@@ -14,7 +14,7 @@ This document details how to get set-up if you would like to clone the repositor
   `sudo apt install python3-pip`
   * Install the first set of needed Python modules:  
   `pip3 install schedule crossrefapi flask virtualenv python-dateutil flask-paginate pytz`
-  * Add the [mysql apt repository](https://dev.mysql.com/downloads/repo/apt/) to your sources. You can use `dkpg -i` or just use Gnome Software Center to install it by double clicking it.
+  * Add the [mysql apt repository](https://dev.mysql.com/downloads/repo/apt/) to your sources. You can use `dpkg -i` or just use Gnome Software Center to install it by double clicking it.
   * Update and install mysql-community-server:  
   `sudo apt update && sudo apt install mysql-community-server`
   * Check systemd to ensure the MySQL daemon is enabled and active:  

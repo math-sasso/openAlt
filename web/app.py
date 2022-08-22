@@ -2,22 +2,23 @@ import flask
 from flask_mysqldb import MySQL
 from flask import request, jsonify
 from datetime import datetime
-
+import os
 # Import our functions for other pages
-from searchLogic import searchLogic
-from articleDashboardLogic import articleDashboardLogic
-from journalDashboardLogic import journalDashboardLogic
-from authorDashboardLogic import authorDashboardLogic
-from landingPageStats import landingPageStats
-from landingPageArticles import landingPageArticles
-from landingPageJournals import landingPageJournals
+from web.searchLogic import searchLogic
+from web.articleDashboardLogic import articleDashboardLogic
+from web.journalDashboardLogic import journalDashboardLogic
+from web.authorDashboardLogic import authorDashboardLogic
+from web.landingPageStats import landingPageStats
+from web.landingPageArticles import landingPageArticles
+from web.landingPageJournals import landingPageJournals
 
-from getPassword import getPassword
+from web.getPassword import getPassword
 
 # get the users password from crossrefeventdata/web/passwd.txt
 mysql_username = 'root'
-mysql_password = getPassword()
-
+#follow these commands
+mysql_password = getPassword() #os.getenv(['MYSQL_PASSWORD'])#getPassword()
+# https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost
 # Instantiate an object of class Flask
 app = flask.Flask(__name__)
 # Database connection settings
