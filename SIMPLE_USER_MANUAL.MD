@@ -26,7 +26,7 @@ pip3 install wheel \
 sudo apt-get install -y build-essential libssl-dev libffi-dev
 
 # Enter repo
-cd openAlt/ \
+cd openAlt/
 
 # install requirments
 python3 -m venv venv \
