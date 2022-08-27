@@ -7,7 +7,7 @@ git clone https://github.com/math-sasso/openAlt.git
 
 # python already installed
 https://cloud.google.com/python/docs/setup#linux
-sudo apt update
+sudo apt update \
 sudo apt install python3 python3-dev python3-venv
 sudo apt-get install wget
 wget https://bootstrap.pypa.io/get-pip.py
